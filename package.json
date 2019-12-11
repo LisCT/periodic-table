@@ -4,6 +4,11 @@
   "description": "Elements from the periodic table.",
   "author": "Lisbel Cruz",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LisCT/periodic-table"
+  },
+  "homepage": "https://LisCT.github.io/periodic-table",
   "dependencies": {
     "@types/node": "^12.12.17",
     "@types/react": "^16.9.16",
@@ -17,6 +22,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "file-loader": "^5.0.2",
+    "gh-pages": "^2.1.1",
     "husky": "^3.1.0",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1",
@@ -30,7 +36,9 @@
   },
   "scripts": {
     "start": "webpack-dev-server -wd",
-    "build": "webpack -p --progress"
+    "build": "webpack -p --progress",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d public"
   },
   "husky": {
     "hooks": {
