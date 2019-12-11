@@ -3,6 +3,8 @@
 
 # production
 /public/bundle.js
+/public/bundle.js.map
+/public/images
 
 # misc
 .DS_Store

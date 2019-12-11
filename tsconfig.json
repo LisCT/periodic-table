@@ -16,5 +16,5 @@
     "outDir": "public",
     "sourceMap": true
   },
-  "include": ["src"]
+  "include": ["src", "global.d.ts"]
 }
