@@ -1,0 +1,30 @@
+{
+  "name": "periodic-table",
+  "version": "1.0.0",
+  "description": "Elements from the periodic table.",
+  "author": "Lisbel Cruz",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "7",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "scripts": {
+    "start": "webpack-dev-server -wd",
+    "build": "webpack -p --progress"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.7.2",
+    "eslint-plugin-react": "^7.17.0",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
