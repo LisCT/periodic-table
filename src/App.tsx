@@ -3,13 +3,33 @@ import styled from "styled-components";
 import { Api } from "./Api";
 import useFetch from "./useFetch";
 
+interface Iterator<T> {
+  next(value?: any): IteratorResult<T>;
+  return?(value?: any): IteratorResult<T>;
+  throw?(e?: any): IteratorResult<T>;
+}
+
+type data = {
+  elements: object[];
+  phases: string[];
+  categories: string[];
+};
+
 const App: React.FC = () => {
-  const [elements, phases, categories, procesing] = useFetch(Api);
+  const [elements, phases, categories, procesing]: data[] = useFetch(Api);
 
   return (
     <Wrapper>
-      {procesing ? <h1>loading...</h1> : <h1>DATA FETCHING</h1>}
-      <h1>Hello</h1>
+      <ul>
+        {procesing ? <h1>loading...</h1> : <h1>HELLO API</h1>}
+        {procesing ? (
+          <h1>loading...</h1>
+        ) : (
+          Object.values(phases).map((phase: any, i: number) => (
+            <li key={phase[i]}>{phase}</li>
+          ))
+        )}
+      </ul>
       <img src="./images/logo.svg" alt="logo" />
     </Wrapper>
   );
