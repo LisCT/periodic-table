@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
-import DataFetching from "./DataFetching";
+import { Api } from "./Api";
+import useFetch from "./useFetch";
 
-const App: React.FC = () => (
-  <Wrapper>
-    <h1>Hello World</h1>
-    <DataFetching />
-    <img src="../images/logo.svg" className="App-logo" alt="logo" />
-  </Wrapper>
-);
+const App: React.FC = () => {
+  const [elements, phases, categories, procesing] = useFetch(Api);
+
+  return (
+    <Wrapper>
+      {procesing ? <h1>loading...</h1> : <h1>DATA FETCHING</h1>}
+      <h1>Hello</h1>
+      <img src="./images/logo.svg" alt="logo" />
+    </Wrapper>
+  );
+};
 
 export default App;
 
