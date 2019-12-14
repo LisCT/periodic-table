@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": ["dom", "dom.iterable", "es6", "es2015.iterable"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -14,7 +14,8 @@
     "isolatedModules": true,
     "jsx": "react",
     "outDir": "public",
-    "sourceMap": true
+    "sourceMap": true,
+    "downlevelIteration": true
   },
   "include": ["src", "global.d.ts"]
 }

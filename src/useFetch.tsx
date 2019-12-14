@@ -11,9 +11,9 @@ import axios from "axios";
  */
 
 const useFetch = (Api: string) => {
-  const [elements, setElements] = useState({});
-  const [phases, setPhases] = useState({});
-  const [categories, setCategories] = useState({});
+  const [elements, setElements] = useState();
+  const [phases, setPhases] = useState();
+  const [categories, setCategories] = useState();
   const [procesing, setProcesing] = useState(true);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const useFetch = (Api: string) => {
         // Objects where the info is pushed before updating the state.
         const elements: object[] = [];
         const phases: string[] = [];
-        const categories: object[] = [];
+        const categories: string[] = [];
 
         // looping through the objects to organize the data
         Object.values(items).map((e: any) => {
