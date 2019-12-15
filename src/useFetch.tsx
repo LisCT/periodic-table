@@ -14,17 +14,16 @@ const useFetch = (Api: string) => {
   const [elements, setElements] = useState();
   const [phases, setPhases] = useState();
   const [categories, setCategories] = useState();
-  const [procesing, setProcesing] = useState(true);
+  const [loading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function procesingData() {
       try {
         // Data from the API call
-        console.log("1️⃣ - Start to process data 🚚.....");
+        console.log("1️⃣ - Start to fetch data 🚚.....");
 
         const response = await axios.get(Api);
-        const data = await response.data;
-        const items: any = await Object.values(data)[0];
+        const data = await response.data.elements;
 
         console.log("2️⃣ - Fetching data completed  📨📝.");
 
@@ -34,7 +33,7 @@ const useFetch = (Api: string) => {
         const categories: string[] = [];
 
         // looping through the objects to organize the data
-        Object.values(items).map((e: any) => {
+        data.map((e: any) => {
           // Destructuring the necessaries fields
           const {
             name,
@@ -76,7 +75,7 @@ const useFetch = (Api: string) => {
         setCategories(categories);
 
         // The procesing of the data is complete ✅
-        setProcesing(false);
+        setIsLoading(false);
         console.log("3️⃣- Procesing data complete ✅.");
       } catch (error) {
         console.log(`error procecing data: ${error}`);
@@ -88,7 +87,7 @@ const useFetch = (Api: string) => {
     }
   }, [Api]);
 
-  return [elements, phases, categories, procesing];
+  return [elements, phases, categories, loading];
 };
 
 export default useFetch;
