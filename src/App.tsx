@@ -3,12 +3,6 @@ import styled from "styled-components";
 import { Api } from "./Api";
 import useFetch from "./useFetch";
 
-interface Iterator<T> {
-  next(value?: any): IteratorResult<T>;
-  return?(value?: any): IteratorResult<T>;
-  throw?(e?: any): IteratorResult<T>;
-}
-
 type data = {
   elements: object[];
   phases: string[];
@@ -16,13 +10,13 @@ type data = {
 };
 
 const App: React.FC = () => {
-  const [elements, phases, categories, procesing]: data[] = useFetch(Api);
+  const [elements, phases, categories, loading]: data[] = useFetch(Api);
 
   return (
     <Wrapper>
       <ul>
-        {procesing ? <h1>loading...</h1> : <h1>HELLO API</h1>}
-        {procesing ? (
+        {loading ? <h1>loading...</h1> : <h1>HELLO API</h1>}
+        {loading ? (
           <h1>loading...</h1>
         ) : (
           Object.values(phases).map((phase: any, i: number) => (
