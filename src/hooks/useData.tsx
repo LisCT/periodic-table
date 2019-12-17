@@ -29,7 +29,7 @@ const useData = (Api: string): Array<any> => {
       const phases: string[] = [];
       const categories: string[] = [];
 
-      // looping through the objects to organize the data
+      // looping through the data to get what we want.
       response.map((e: any) => {
         // Destructuring the necessaries fields
         const {
@@ -70,8 +70,6 @@ const useData = (Api: string): Array<any> => {
       setElements(items);
       setPhases(phases);
       setCategories(categories);
-
-      //console.log("3️⃣- Procesing data complete ✅.");
       setIsLoading(false);
     } catch (error) {
       console.log(`error procesing the data: ${error}`);
