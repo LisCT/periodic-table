@@ -7,7 +7,7 @@ const Phases = () => {
   return (
     <ul>
       {isLoading ? (
-        <h1>loading...</h1>
+        <li>loading...</li>
       ) : (
         phases.map((phase: any, i: number) => <li key={phase[i]}>{phase}</li>)
       )}

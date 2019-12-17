@@ -5,13 +5,14 @@ import useFetch from "./useFetch";
  * Using The Data
  * * The data is getting from the useFetch hook.
  * * It's organized in 3 objects:
- * ? 1.Elements: that holds all the items with the necessary values for the UI.
- * ? 2.Phases: holds the phases that are going to be used for filtering.
- * ? 3.Categories: holds the categories that are going to be used for filtering.
- * @param Api this method is expecting an URL to be used for the useFetch(Api).
+ * ? 1.Elements: object[].
+ * ? 2.Phases: string[].
+ * ? 3.Categories: string[].
+ * @param {string} Api - expecting an URL.
+ * @returns {array} - [elements, phases, categories, isLoading]
  */
 
-const useData = (Api: string) => {
+const useData = (Api: string): Array<any> => {
   const [data, isFetching] = useFetch(Api);
   const [elements, setElements] = useState();
   const [phases, setPhases] = useState();
