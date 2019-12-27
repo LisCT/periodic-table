@@ -1,15 +1,20 @@
 import React from "react";
 import styled from "styled-components";
+import { GlobalProvider } from "./GlobalState";
+import Phases from "./Phases";
+const Wrapper = styled.div`
+  background-color: gray;
+`;
 
-const App: React.FC = () => (
-  <Wrapper>
-    <h1>Hello World</h1>
-    <img src="../images/logo.svg" className="App-logo" alt="logo" />
-  </Wrapper>
-);
+const App: React.FC = () => {
+  return (
+    <GlobalProvider>
+      <Wrapper>
+        <Phases />
+        <img src="./images/logo.svg" alt="logo" />
+      </Wrapper>
+    </GlobalProvider>
+  );
+};
 
 export default App;
-
-const Wrapper = styled.div`
-  background-color: red;
-`;
