@@ -8,7 +8,7 @@ React Hooks / Typescript / Webpack
 
 ## Start
 
-1. Install dependencies
+Install dependencies
 
 ```bash
 yarn install or npm install
@@ -34,7 +34,7 @@ Deployment to github pages
 yarn run deploy or npm run deploy
 ```
 
-Front-End
+## Front-End
 
 ```bash
 http://localhost:8080
