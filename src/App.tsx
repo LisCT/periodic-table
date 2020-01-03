@@ -1,18 +1,13 @@
 import React from "react";
-import styled from "styled-components";
 import { GlobalProvider } from "./GlobalState";
-import Phases from "./Phases";
-const Wrapper = styled.div`
-  background-color: gray;
-`;
+import GlobalStyle from "./GlobalStyle";
 
 const App: React.FC = () => {
   return (
     <GlobalProvider>
-      <Wrapper>
-        <Phases />
-        <img src="./images/logo.svg" alt="logo" />
-      </Wrapper>
+      <GlobalStyle />
+      <h1>Testing fonts</h1>
+      <img src="./images/logo.svg" alt="logo" />
     </GlobalProvider>
   );
 };
