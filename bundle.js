@@ -99,25 +99,25 @@ function l(){for(var e=0,t=0,n=arguments.length;t<n;t++)e+=arguments[t].length;v
 
   &:before,
   &:after {
-      line-height: 1.5rem;
-      width: 4rem;
-      text-align: center;
-      font-weight: 600;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      position: absolute;
-      bottom: 0;
-      transition: opacity 0.25s;
-    }
+    line-height: 1.5rem;
+    width: 4rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 0;
+    transition: opacity 0.25s;
+  }
 
   &:before {
-    content: 'Light';
+    content: "Light";
     left: -4rem;
   }
 
   &:after {
-    content: 'Dark';
+    content: "Dark";
     right: -4rem;
     color: ${i.dark.colors.main};
   }
@@ -146,6 +146,5 @@ function l(){for(var e=0,t=0,n=arguments.length;t<n;t++)e+=arguments[t].length;v
   &.active:after {
     color: ${i.branding.blue};
   }
-  
 `},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});const r=n(6);t.branding={purple:"#5D1E5C",yellow:"#F7C46A",red:"#E2696C",gray:"#EEECEC",light:"#FAFAFA",blue:"#77A1D5"},t.table={gas:"#7F3433",solid:"#596673",liquid:"#5EA8E3",unknown:"#B2B2B2",alkali:"#F1A9B1",transition:"#F4BF79","alkaline earth":"#7A47A7","post-transition":"#F7C46A",actinide:"#7CDD6B",lanthanide:"#B7D358",metalloid:"#70B843","other nonmetals":"#C6D0D5","noble gas":"#F06F6E"},t.light={colors:{main:"#ffffff",logo:t.branding.purple,middle:r.lighten(.3,t.branding.gray),bottom:t.branding.gray,text:"#343434",lines:"#D8D8D8",cta:"#77A1D5",name:t.branding.blue}},t.dark={colors:{main:"#12181C",logo:t.branding.gray,middle:"#1A2731",bottom:"#12181C",text:t.branding.gray,lines:r.lighten(.6,"#D8D8D8"),cta:"#347989",name:"#657E92"}}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.fonts={primary:"font-family: 'Roboto', sans-serif",secondary:"font-family: 'Poppins', sans-serif"}}]);
 //# sourceMappingURL=bundle.js.map
