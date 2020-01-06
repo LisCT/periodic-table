@@ -1,8 +1,8 @@
 import React from "react";
-import { Toggle } from "../template/Toggle";
+import Toggle from "../template/Toggle";
 import styled from "styled-components";
 
-const Header = ({ className }: any) => (
+const Header = ({ className }: { className: string }) => (
   <header className={className}>
     <img src="./images/logo.svg" alt="logo" />
     <Toggle />

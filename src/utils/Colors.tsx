@@ -5,6 +5,7 @@ export const branding = {
   yellow: "#F7C46A",
   red: "#E2696C",
   gray: "#EEECEC",
+  light: "#FAFAFA",
   blue: "#77A1D5"
 };
 
