@@ -1,13 +1,13 @@
 import React from "react";
 import { GlobalProvider } from "./GlobalState";
 import GlobalStyle from "./GlobalStyle";
+import Header from "./components/layouts/Header";
 
 const App: React.FC = () => {
   return (
     <GlobalProvider>
       <GlobalStyle />
-      <h1>Testing fonts</h1>
-      <img src="./images/logo.svg" alt="logo" />
+      <Header />
     </GlobalProvider>
   );
 };
