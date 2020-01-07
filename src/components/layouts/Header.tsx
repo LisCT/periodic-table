@@ -21,11 +21,7 @@ export default styled(Header)`
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background: ${(props: any) => props.theme.colors.main} svg {
-    width: 100%;
-    height: 80px;
-    text-align: center;
-  }
+  background: ${(props: any) => props.theme.colors.main};
 
   svg {
     text-align: center;
