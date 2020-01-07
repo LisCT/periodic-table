@@ -1,4 +1,4 @@
 export const fonts = {
-  primary: "font-family: 'Roboto', sans-serif",
-  secondary: "font-family: 'Poppins', sans-serif"
+  primary: "font-family: 'Poppins', sans-serif",
+  secondary: "font-family: 'Roboto', sans-serif"
 };

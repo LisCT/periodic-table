@@ -1,20 +1,32 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
-import { branding, dark } from "../../utils/Colors";
-import { fonts } from "../../utils/Fonts";
+import { branding, dark, light } from "../../utils/Colors";
+import { GlobalContext } from "../../GlobalState";
 
-export const Toggle = ({ className }: { className: string }) => (
-  <button className={`${className}`}>
-    <div className="handle"></div>
-  </button>
-);
+const Toggle = ({ className }: { className: string }) => {
+  const { theme, setTheme } = useContext(GlobalContext);
+
+  const themeResult = theme.colors.palette == "light" ? dark : light;
+
+  return (
+    <div>
+      <button
+        className={`${className} ${
+          theme.colors.palette == "light" ? "" : "active"
+        } `}
+        onClick={() => setTheme(themeResult)}
+      >
+        <div className="handle"></div>
+      </button>
+    </div>
+  );
+};
 
 export default styled(Toggle)`
   border: none;
   border-radius: 1.5rem;
   background: ${branding.blue};
   color: ${branding.blue};
-  ${fonts.secondary};
   height: 1.5rem;
   width: 3rem;
   margin: 0 4rem;
@@ -49,7 +61,7 @@ export default styled(Toggle)`
   &:after {
     content: "Dark";
     right: -4rem;
-    color: ${dark.colors.main};
+    color: ${(props: any) => props.theme.colors.dark};
   }
 
   & > .handle {
@@ -67,11 +79,11 @@ export default styled(Toggle)`
     transition: background-color 0.25s;
   }
   &.active > .handle {
-    left: 1.3rem;
+    left: 1.6rem;
     transition: left 0.25s;
   }
   &.active:before {
-    color: ${dark.colors.main};
+    color: ${dark.colors.logo};
   }
   &.active:after {
     color: ${branding.blue};

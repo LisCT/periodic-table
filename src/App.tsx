@@ -1,15 +1,11 @@
 import React from "react";
 import { GlobalProvider } from "./GlobalState";
-import GlobalStyle from "./GlobalStyle";
-import Header from "./components/layouts/Header";
+import Table from "./components/layouts/Table";
 
-const App: React.FC = () => {
-  return (
-    <GlobalProvider>
-      <GlobalStyle />
-      <Header />
-    </GlobalProvider>
-  );
-};
+const App: React.FC = () => (
+  <GlobalProvider>
+    <Table />
+  </GlobalProvider>
+);
 
 export default App;

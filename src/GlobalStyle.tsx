@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { normalize } from "polished";
+import { fonts } from "./utils/Fonts";
 
 const GlobalStyle = createGlobalStyle`
   ${normalize()}
@@ -18,7 +19,14 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: antialiased;
+    ${fonts.primary};
   }
+
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+
 `;
 
 export default GlobalStyle;

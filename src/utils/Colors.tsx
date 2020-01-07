@@ -27,7 +27,10 @@ export const table = {
 
 export const light = {
   colors: {
+    palette: "light",
     main: "#ffffff",
+    footer: branding.gray,
+    dark: "#343434",
     logo: branding.purple,
     middle: lighten(0.3, branding.gray),
     bottom: branding.gray,
@@ -40,7 +43,10 @@ export const light = {
 
 export const dark = {
   colors: {
+    palette: "dark",
     main: "#12181C",
+    footer: "#12181C",
+    dark: branding.gray,
     logo: branding.gray,
     middle: "#1A2731",
     bottom: "#12181C",
