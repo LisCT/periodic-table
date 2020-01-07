@@ -26,4 +26,10 @@ export default styled(Header)`
     height: 80px;
     text-align: center;
   }
+
+  svg {
+    text-align: center;
+    width: 100%;
+    height: 80px;
+  }
 `;
