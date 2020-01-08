@@ -20,12 +20,12 @@ export default styled(Header)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 3em 2em;
   background: ${(props: any) => props.theme.colors.main};
 
   svg {
     text-align: center;
     width: 100%;
-    height: 80px;
+    height: 70px;
   }
 `;

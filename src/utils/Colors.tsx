@@ -32,7 +32,7 @@ export const light = {
     footer: branding.gray,
     dark: "#343434",
     logo: branding.purple,
-    middle: lighten(0.3, branding.gray),
+    middle: lighten(0.05, branding.gray),
     bottom: branding.gray,
     text: "#343434",
     lines: "#D8D8D8",
