@@ -43,7 +43,9 @@ const useData = (Api: string): Array<any> => {
           category,
           discovered_by,
           appearance,
-          source
+          source,
+          xpos,
+          ypos
         } = e;
 
         // Organizing the data in phases & categories if the item exist don't repeat.
@@ -61,7 +63,9 @@ const useData = (Api: string): Array<any> => {
           category,
           discovered_by,
           appearance,
-          source
+          source,
+          xpos,
+          ypos
         });
       });
       phases.push("unknown");

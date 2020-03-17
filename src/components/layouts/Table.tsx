@@ -1,14 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import Elements from "../template/Elements";
+import { GlobalContext } from "../../GlobalState";
 
-const Table = ({ className }: { className: string }) => (
-  <div className={className}>
-    <div className="grid">
-      {/* Elements Here */}
-      <div className="element">H</div>
+const Table = ({ className }: { className: string }) => {
+  const { items, isLoading } = useContext(GlobalContext);
+
+  return (
+    <div className={className}>
+      <div className="grid">
+        {/* Elements Here */}
+        {isLoading
+          ? "Loading..."
+          : items.map((element: any) => (
+              <Elements
+                key={element.number}
+                name={element.name}
+                xpos={element.xpos}
+                ypos={element.ypos}
+              />
+            ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default styled(Table)`
   display: flex;
@@ -19,18 +34,12 @@ export default styled(Table)`
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(18, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(18, 70px);
+    grid-template-rows: repeat(10, 70px);
     width: 100vw;
     grid-gap: 4px;
     min-height: calc(10 * 70px);
     max-width: calc(18 * 70px);
     justify-content: center;
-  }
-
-  .element {
-    background-color: pink;
-    grid-column: 18;
-    grid-row: 2;
   }
 `;
